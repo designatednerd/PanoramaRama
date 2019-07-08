@@ -9,7 +9,7 @@ import Foundation
 import Files
 import Plister
 
-struct EnvironmentUpdater {
+public struct EnvironmentUpdater {
     enum EnvError: Error, LocalizedError {
         case couldntLoadFromEnv
         
@@ -21,7 +21,7 @@ struct EnvironmentUpdater {
         }
     }
     
-    static func updateEnvironment(file: File) throws {
+    public static func updateEnvironment(file: File) throws {
         if
             let secretsFolder = SourceFolders.secrets,
             let secrets = try? secretsFolder.file(named: "production.json") {
@@ -39,7 +39,7 @@ struct EnvironmentUpdater {
         }
     }
     
-    static func resetEnvironment(file: File) throws {
+    public static func resetEnvironment(file: File) throws {
         try file.resetToGitHEAD()
     }
 }

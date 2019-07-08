@@ -8,7 +8,7 @@
 import Files
 import ShellOut
 
-extension File {
+public extension File {
     
     /// Resets the caller (and ONLY the caller) to its git head.
     func resetToGitHEAD() throws {

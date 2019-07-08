@@ -7,11 +7,11 @@
 
 import Files
 
-struct ImageGenerator {
+public struct ImageGenerator {
     
     private static let imageSetPostfix = ".imageset"
     
-    static func run(catalogFolder: Folder, outputFolder: Folder) throws {
+    public static func generate(catalogFolder: Folder, outputFolder: Folder) throws {
         let boilerplate = try self.generateImageBoilerplate(from: catalogFolder)
         let targetFile = try outputFolder.file(named: "ImageAsset.swift")
         

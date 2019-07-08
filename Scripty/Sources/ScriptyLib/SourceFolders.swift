@@ -8,32 +8,32 @@
 import Foundation
 import Files
 
-struct SourceFolders {
+public struct SourceFolders {
     
-    static var scriptRoot: Folder {
+    public static var scriptRoot: Folder {
         let currentFile = try! File(path: #file)
         let sourcesForScripty = currentFile.parent
         let overallSources = sourcesForScripty!.parent
         return overallSources!.parent!
     }
     
-    static var sourceRoot: Folder {
+    public static var sourceRoot: Folder {
         return self.scriptRoot.parent!
     }
     
-    static var appRoot: Folder {
+    public static var appRoot: Folder {
         return try! self.sourceRoot.subfolder(named: "PanoramaRama")
     }
     
-    static var assetCatalog: Folder {
+    public static var assetCatalog: Folder {
         return try! self.appRoot.subfolder(named: "Assets.xcassets")
     }
     
-    static var generatedCode: Folder {
+    public static var generatedCode: Folder {
         return try! self.appRoot.subfolder(named: "GeneratedCode")
     }
     
-    static var secrets: Folder? {
+    public static var secrets: Folder? {
         return try? self.sourceRoot.subfolder(named: ".secrets")
     }
 }
