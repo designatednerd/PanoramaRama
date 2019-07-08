@@ -10,16 +10,34 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet private(set) var imageView: UIImageView!
+    @IBOutlet private(set) var titleLabel: UILabel!
+    @IBOutlet private(set) var locationLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
 
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
+    var panorama: Panorama? {
+        didSet {
+            // Update the view.
+            configureView()
         }
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    } 
+    
+    func configureView() {
+        guard let pano = self.panorama else {
+            // Do nothing
+            self.descriptionLabel?.text = nil
+            return
+        }
+        
+        self.descriptionLabel?.text = pano.description
+        self.imageView?.image = pano.image
+        self.title = pano.title
+        self.titleLabel?.text = pano.title
+        self.locationLabel?.text = pano.location
     }
 
     override func viewDidLoad() {
@@ -27,14 +45,5 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         configureView()
     }
-
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
-    }
-
-
 }
 

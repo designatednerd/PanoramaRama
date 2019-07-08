@@ -13,6 +13,10 @@
 		9BD769CF22D24D1F00C49A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD769CD22D24D1F00C49A84 /* Main.storyboard */; };
 		9BD769D122D24D2100C49A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD769D022D24D2100C49A84 /* Assets.xcassets */; };
 		9BD769D422D24D2100C49A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD769D222D24D2100C49A84 /* LaunchScreen.storyboard */; };
+		9BD769DC22D24D2F00C49A84 /* Panoramas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD769DB22D24D2F00C49A84 /* Panoramas.swift */; };
+		9BD769DE22D29AEE00C49A84 /* PanoramaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD769DD22D29AEE00C49A84 /* PanoramaCell.swift */; };
+		9BD769E022D29B7100C49A84 /* PanoramaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD769DF22D29B7100C49A84 /* PanoramaCell.xib */; };
+		9BD769E222D2B3A900C49A84 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BD769E122D2B3A900C49A84 /* Environment.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9BD769D022D24D2100C49A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BD769D322D24D2100C49A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BD769D522D24D2100C49A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD769DB22D24D2F00C49A84 /* Panoramas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panoramas.swift; sourceTree = "<group>"; };
+		9BD769DD22D29AEE00C49A84 /* PanoramaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaCell.swift; sourceTree = "<group>"; };
+		9BD769DF22D29B7100C49A84 /* PanoramaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanoramaCell.xib; sourceTree = "<group>"; };
+		9BD769E122D2B3A900C49A84 /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				9BD769D022D24D2100C49A84 /* Assets.xcassets */,
 				9BD769D222D24D2100C49A84 /* LaunchScreen.storyboard */,
 				9BD769D522D24D2100C49A84 /* Info.plist */,
+				9BD769DB22D24D2F00C49A84 /* Panoramas.swift */,
+				9BD769DD22D29AEE00C49A84 /* PanoramaCell.swift */,
+				9BD769DF22D29B7100C49A84 /* PanoramaCell.xib */,
+				9BD769E122D2B3A900C49A84 /* Environment.plist */,
 			);
 			path = PanoramaRama;
 			sourceTree = "<group>";
@@ -125,9 +137,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD769E022D29B7100C49A84 /* PanoramaCell.xib in Resources */,
 				9BD769D422D24D2100C49A84 /* LaunchScreen.storyboard in Resources */,
 				9BD769D122D24D2100C49A84 /* Assets.xcassets in Resources */,
 				9BD769CF22D24D1F00C49A84 /* Main.storyboard in Resources */,
+				9BD769E222D2B3A900C49A84 /* Environment.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD769DC22D24D2F00C49A84 /* Panoramas.swift in Sources */,
 				9BD769CC22D24D1F00C49A84 /* DetailViewController.swift in Sources */,
+				9BD769DE22D29AEE00C49A84 /* PanoramaCell.swift in Sources */,
 				9BD769CA22D24D1F00C49A84 /* MasterViewController.swift in Sources */,
 				9BD769C822D24D1F00C49A84 /* AppDelegate.swift in Sources */,
 			);
