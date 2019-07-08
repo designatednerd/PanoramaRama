@@ -5,13 +5,38 @@
 //  Created by Ellen Shapiro on 7/8/19.
 //
 
+import Foundation
 import Files
 import Plister
 
 struct EnvironmentUpdater {
+    enum EnvError: Error, LocalizedError {
+        case couldntLoadFromEnv
+        
+        var localizedDescription: String {
+            switch self {
+            case .couldntLoadFromEnv:
+                return "Couldn't load all information from the environment"
+            }
+        }
+    }
     
     static func updateEnvironment(file: File) throws {
-        try Plister.setValue("I was updated!", for: "string_secret", in: file)
+        if
+            let secretsFolder = SourceFolders.secrets,
+            let secrets = try? secretsFolder.file(named: "production.json") {
+                let json = try JSONLoader.loadJSONDictionary(from: secrets)
+                try json.forEach { key, value in
+                    try Plister.setValue(value, for: key, in: file)
+                }
+        } else {
+            let env = ProcessInfo.processInfo.environment
+            guard let stringSecret = env["string_secret"] else {
+                throw EnvironmentUpdater.EnvError.couldntLoadFromEnv
+            }
+            
+            try Plister.setValue(stringSecret, for: "string_secret", in: file)
+        }
     }
     
     static func resetEnvironment(file: File) throws {

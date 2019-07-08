@@ -32,4 +32,8 @@ struct SourceFolders {
     static var generatedCode: Folder {
         return try! self.appRoot.subfolder(named: "GeneratedCode")
     }
+    
+    static var secrets: Folder? {
+        return try? self.sourceRoot.subfolder(named: ".secrets")
+    }
 }
