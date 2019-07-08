@@ -17,6 +17,7 @@
 		9BD769DE22D29AEE00C49A84 /* PanoramaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD769DD22D29AEE00C49A84 /* PanoramaCell.swift */; };
 		9BD769E022D29B7100C49A84 /* PanoramaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD769DF22D29B7100C49A84 /* PanoramaCell.xib */; };
 		9BD769E222D2B3A900C49A84 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BD769E122D2B3A900C49A84 /* Environment.plist */; };
+		9BD76A1322D3406E00C49A84 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD76A1222D3406E00C49A84 /* ImageAsset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9BD769DD22D29AEE00C49A84 /* PanoramaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaCell.swift; sourceTree = "<group>"; };
 		9BD769DF22D29B7100C49A84 /* PanoramaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanoramaCell.xib; sourceTree = "<group>"; };
 		9BD769E122D2B3A900C49A84 /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
+		9BD76A1222D3406E00C49A84 /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,16 +69,25 @@
 				9BD769C722D24D1F00C49A84 /* AppDelegate.swift */,
 				9BD769C922D24D1F00C49A84 /* MasterViewController.swift */,
 				9BD769CB22D24D1F00C49A84 /* DetailViewController.swift */,
-				9BD769CD22D24D1F00C49A84 /* Main.storyboard */,
-				9BD769D022D24D2100C49A84 /* Assets.xcassets */,
-				9BD769D222D24D2100C49A84 /* LaunchScreen.storyboard */,
-				9BD769D522D24D2100C49A84 /* Info.plist */,
 				9BD769DB22D24D2F00C49A84 /* Panoramas.swift */,
+				9BD769CD22D24D1F00C49A84 /* Main.storyboard */,
+				9BD769D222D24D2100C49A84 /* LaunchScreen.storyboard */,
 				9BD769DD22D29AEE00C49A84 /* PanoramaCell.swift */,
 				9BD769DF22D29B7100C49A84 /* PanoramaCell.xib */,
+				9BD769D522D24D2100C49A84 /* Info.plist */,
+				9BD769D022D24D2100C49A84 /* Assets.xcassets */,
 				9BD769E122D2B3A900C49A84 /* Environment.plist */,
+				9BD76A1022D33FBF00C49A84 /* GeneratedCode */,
 			);
 			path = PanoramaRama;
+			sourceTree = "<group>";
+		};
+		9BD76A1022D33FBF00C49A84 /* GeneratedCode */ = {
+			isa = PBXGroup;
+			children = (
+				9BD76A1222D3406E00C49A84 /* ImageAsset.swift */,
+			);
+			path = GeneratedCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD76A1322D3406E00C49A84 /* ImageAsset.swift in Sources */,
 				9BD769DC22D24D2F00C49A84 /* Panoramas.swift in Sources */,
 				9BD769CC22D24D1F00C49A84 /* DetailViewController.swift in Sources */,
 				9BD769DE22D29AEE00C49A84 /* PanoramaCell.swift in Sources */,

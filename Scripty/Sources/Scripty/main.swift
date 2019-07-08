@@ -7,6 +7,7 @@ let plistFile = try SourceFolders.appRoot.file(named: "Environment.plist")
 if args.contains("--prebuild") {
     print("Run pre-build tasks")
     try EnvironmentUpdater.updateEnvironment(file: plistFile)
+    try ImageGenerator.run(catalogFolder: SourceFolders.assetCatalog, outputFolder: SourceFolders.generatedCode)
 }
 
 if args.contains("--postbuild") {

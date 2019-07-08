@@ -24,4 +24,12 @@ struct SourceFolders {
     static var appRoot: Folder {
         return try! self.sourceRoot.subfolder(named: "PanoramaRama")
     }
+    
+    static var assetCatalog: Folder {
+        return try! self.appRoot.subfolder(named: "Assets.xcassets")
+    }
+    
+    static var generatedCode: Folder {
+        return try! self.appRoot.subfolder(named: "GeneratedCode")
+    }
 }
