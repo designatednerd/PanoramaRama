@@ -86,9 +86,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BD769D822D24D2100C49A84 /* Build configuration list for PBXNativeTarget "PanoramaRama" */;
 			buildPhases = (
+				9BD76A0C22D32CEC00C49A84 /* Scripty Prebuild */,
 				9BD769C022D24D1F00C49A84 /* Sources */,
 				9BD769C122D24D1F00C49A84 /* Frameworks */,
 				9BD769C222D24D1F00C49A84 /* Resources */,
+				9BD76A0D22D32D0200C49A84 /* Scripty Postbuild */,
 			);
 			buildRules = (
 			);
@@ -146,6 +148,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BD76A0C22D32CEC00C49A84 /* Scripty Prebuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Scripty Prebuild";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd Scripty\nswift run Scripty --prebuild\n";
+		};
+		9BD76A0D22D32D0200C49A84 /* Scripty Postbuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Scripty Postbuild";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd Scripty\nswift run Scripty --postbuild\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9BD769C022D24D1F00C49A84 /* Sources */ = {
